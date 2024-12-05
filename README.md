@@ -11,10 +11,11 @@ The rapid growth in machine learning (ML) data and model complexity has driven t
 Key features of these frameworks include ease of use, with shared parameters for efficient computation; asynchronous communication, which balances algorithm convergence and system efficiency; elastic scalability, allowing dynamic node addition without system restart; and fault tolerance, ensuring reliability even with inevitable node failures. For example, with an MTBF of three years, a system with 1,000 nodes may experience one failure per day. Scheduler pre-emption can further increase this failure rate in industrial deployments. These design choices are essential for optimizing the performance and robustness of distributed ML systems.
 
 ![screenshot](Figures/compare.jpeg)
+
 Comparison of different frameworks : Angel represents the Parameter Server, Spark exemplifies MapReduce, and TensorFlow and PyTorch embody the Data Flow.
 ## 2. Mainstream frameworks in Distributed ML
 
-### 2.1 Iterative MapReduce/AllReduce Topology
+### 2.1 Iterative MapReduce/AllReduce
 Frameworks using the iterative MapReduce or AllReduce topology rely on aggregating intermediate results across distributed nodes. Popular examples include Apache Spark's MLlib and MPI-based systems.
 
 - **Design**: Nodes perform local computations, followed by aggregation across the cluster.
@@ -22,7 +23,7 @@ Frameworks using the iterative MapReduce or AllReduce topology rely on aggregati
 - **Challenges**: Limited by communication overhead and lack of support for dynamic model updates.
 - **Example**: Spark MLlib utilizes Resilient Distributed Datasets (RDDs) to enable fault-tolerant parallelism.
 
-### 2.2 Parameter Server Topology
+### 2.2 Parameter Server
 The parameter server topology distributes ML tasks across worker nodes and servers managing global parameters. Examples include the Parameter Server from Carnegie Mellon University (CMU), Petuum, and Microsoft's Multiverso.
 
 - **Design**: Worker nodes perform gradient computations, while server nodes manage parameter updates asynchronously or synchronously.
@@ -30,7 +31,7 @@ The parameter server topology distributes ML tasks across worker nodes and serve
 - **Challenges**: Synchronization delays and potential bottlenecks at the server nodes.
 - **Example**: Microsoft's Multiverso enhances training efficiency by supporting dynamic scheduling and fault tolerance.
 
-### 2.3 Data Flow Topology
+### 2.3 Data Flow
 Data flow-based systems represent computations as directed acyclic graphs (DAGs) of operations. Google's TensorFlow is the most prominent example in this category.
 
 - **Design**: Nodes represent operations, and edges indicate data dependencies, enabling parallel execution and dynamic task scheduling.
