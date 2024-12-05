@@ -1,9 +1,9 @@
-# csci596
-
-# Distributed Machine Learning Systems: A Study of Communication Topologies
+# Distributed Machine Learning Systems: A Study
 
 ## Abstract
-The growing computational cost of training machine learning models has made distributed processing essential in modern artificial intelligence research and applications. This paper explores the categorization of distributed machine learning (ML) frameworks based on communication topologies: iterative MapReduce/AllReduce, parameter servers, and data flow-based systems. We provide a comparative analysis of representative frameworks, such as Spark MLlib, TensorFlow, and Microsoft Multiverso, emphasizing their design principles, strengths, and challenges. The findings aim to guide researchers and practitioners in selecting suitable frameworks for various ML tasks.
+The growing computational cost of training machine learning models has made distributed processing essential in modern artificial intelligence research and applications. This proposal explores the categorization of distributed machine learning (ML) frameworks based on communication topologies: iterative MapReduce/AllReduce, parameter servers, and data flow-based systems. We provide a comparative analysis of representative frameworks, such as Spark MLlib, TensorFlow, and Microsoft Multiverso, emphasizing their design principles, strengths, and challenges. The findings aim to guide researchers and practitioners in selecting suitable frameworks for various ML tasks.
+
+![screenshot](Figures/compare.jpeg)
 
 ## 1. Introduction
 The exponential growth in machine learning (ML) data and model complexity has necessitated distributed computing to meet scalability requirements. Distributed ML systems leverage parallelism to handle the computational and data-intensive nature of modern ML. Communication topology, a critical design aspect, dictates how information is shared and synchronized across distributed nodes, influencing performance, scalability, and fault tolerance. This paper categorizes ML frameworks based on their communication topologies and evaluates their impact on distributed ML.
