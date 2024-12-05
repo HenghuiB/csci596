@@ -33,8 +33,8 @@ The parameter server topology distributes ML tasks across worker nodes and serve
 - **Challenges**: Synchronization delays and potential bottlenecks at the server nodes.
 - **Example**: Microsoft's Multiverso enhances training efficiency by supporting dynamic scheduling and fault tolerance.
 
-![screenshot](Figures/TensorFlow.png)
-![screenshot](Figures/mCBrs.gif)
+![screenshot](Figures/ps.png)
+
 
 
 ### 2.3 Data Flow
@@ -45,8 +45,8 @@ Data flow-based systems represent computations as directed acyclic graphs (DAGs)
 - **Challenges**: Overhead in DAG scheduling and debugging complexity.
 - **Example**: TensorFlow supports automatic differentiation and seamless integration with GPUs/TPUs for accelerated training.
 
-![screenshot](Figures/ps.png)
-
+![screenshot](Figures/TensorFlow.png)
+![screenshot](Figures/mCBrs.gif)
 
 ## 3. Comparative Analysis
 
