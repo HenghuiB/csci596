@@ -3,12 +3,16 @@
 ## Abstract
 The growing computational cost of training machine learning models has made distributed processing essential in modern artificial intelligence research and applications. This proposal explores the categorization of distributed machine learning (ML) frameworks based on communication topologies: iterative MapReduce/AllReduce, parameter servers, and data flow-based systems. We provide a comparative analysis of representative frameworks, such as Spark MLlib, TensorFlow, and Microsoft Multiverso, emphasizing their design principles, strengths, and challenges. The findings aim to guide researchers and practitioners in selecting suitable frameworks for various ML tasks.
 
-![screenshot](Figures/compare.jpeg)
+
 
 ## 1. Introduction
-The exponential growth in machine learning (ML) data and model complexity has necessitated distributed computing to meet scalability requirements. Distributed ML systems leverage parallelism to handle the computational and data-intensive nature of modern ML. Communication topology, a critical design aspect, dictates how information is shared and synchronized across distributed nodes, influencing performance, scalability, and fault tolerance. This paper categorizes ML frameworks based on their communication topologies and evaluates their impact on distributed ML.
+The rapid growth in machine learning (ML) data and model complexity has driven the need for distributed computing to meet scalability demands. These systems rely on communication topology to manage how information is shared and synchronized across nodes, impacting performance, scalability, and fault tolerance. This paper categorizes ML frameworks based on their communication topologies and evaluates their effects on distributed ML systems.
 
-## 2. Communication Topologies in Distributed ML
+Key features of these frameworks include ease of use, with shared parameters for efficient computation; asynchronous communication, which balances algorithm convergence and system efficiency; elastic scalability, allowing dynamic node addition without system restart; and fault tolerance, ensuring reliability even with inevitable node failures. For example, with an MTBF of three years, a system with 1,000 nodes may experience one failure per day. Scheduler pre-emption can further increase this failure rate in industrial deployments. These design choices are essential for optimizing the performance and robustness of distributed ML systems.
+
+![screenshot](Figures/compare.jpeg)
+
+## 2. Mainstream frameworks in Distributed ML
 
 ### 2.1 Iterative MapReduce/AllReduce Topology
 Frameworks using the iterative MapReduce or AllReduce topology rely on aggregating intermediate results across distributed nodes. Popular examples include Apache Spark's MLlib and MPI-based systems.
