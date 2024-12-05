@@ -23,6 +23,8 @@ Frameworks using the iterative MapReduce or AllReduce topology rely on aggregati
 - **Challenges**: Limited by communication overhead and lack of support for dynamic model updates.
 - **Example**: Spark MLlib utilizes Resilient Distributed Datasets (RDDs) to enable fault-tolerant parallelism.
 
+![screenshot](Figures/spark.png)
+
 ### 2.2 Parameter Server
 The parameter server topology distributes ML tasks across worker nodes and servers managing global parameters. Examples include the Parameter Server from Carnegie Mellon University (CMU), Petuum, and Microsoft's Multiverso.
 
@@ -31,6 +33,10 @@ The parameter server topology distributes ML tasks across worker nodes and serve
 - **Challenges**: Synchronization delays and potential bottlenecks at the server nodes.
 - **Example**: Microsoft's Multiverso enhances training efficiency by supporting dynamic scheduling and fault tolerance.
 
+![screenshot](Figures/TensorFlow.png)
+![screenshot](Figures/mCBrs.gif)
+
+
 ### 2.3 Data Flow
 Data flow-based systems represent computations as directed acyclic graphs (DAGs) of operations. Google's TensorFlow is the most prominent example in this category.
 
@@ -38,6 +44,9 @@ Data flow-based systems represent computations as directed acyclic graphs (DAGs)
 - **Strengths**: Flexibility in expressing complex ML models and compatibility with hardware accelerators.
 - **Challenges**: Overhead in DAG scheduling and debugging complexity.
 - **Example**: TensorFlow supports automatic differentiation and seamless integration with GPUs/TPUs for accelerated training.
+
+![screenshot](Figures/ps.png)
+
 
 ## 3. Comparative Analysis
 
