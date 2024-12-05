@@ -11,7 +11,7 @@ The rapid growth in machine learning (ML) data and model complexity has driven t
 Key features of these frameworks include ease of use, with shared parameters for efficient computation; asynchronous communication, which balances algorithm convergence and system efficiency; elastic scalability, allowing dynamic node addition without system restart; and fault tolerance, ensuring reliability even with inevitable node failures. For example, with an MTBF of three years, a system with 1,000 nodes may experience one failure per day. Scheduler pre-emption can further increase this failure rate in industrial deployments. These design choices are essential for optimizing the performance and robustness of distributed ML systems.
 
 ![screenshot](Figures/compare.jpeg)
-
+Comparison of different frameworks : Angel represents the Parameter Server, Spark exemplifies MapReduce, and TensorFlow and PyTorch embody the Data Flow.
 ## 2. Mainstream frameworks in Distributed ML
 
 ### 2.1 Iterative MapReduce/AllReduce Topology
